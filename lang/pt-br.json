@@ -1,0 +1,10 @@
+{
+  "GRIDINV.Inventory": "Inventário",
+  "GRIDINV.Edit": "Editar itens",
+  "GRIDINV.DoneEditing": "Terminar de editar",
+  "GRIDINV.Tray": "Banco",
+  "GRIDINV.Spawn": "Criar",
+  "GRIDINV.Gave": "{item} entregue a {actor}",
+  "GRIDINV.Items.briefcase.name": "Maleta",
+  "GRIDINV.Items.briefcase.desc": "Maleta boa."
+}

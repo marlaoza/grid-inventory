@@ -1,0 +1,141 @@
+:root{
+    --cell-size: 45px;
+    --cell-size-small: 30px;
+    --border-color: #9f8475;
+}
+
+.inventory-window .window-header {
+    display: none;
+}
+
+.inventory-window .window-content {
+    padding: 0;
+    gap: 0;
+    overflow: visible;
+    width: fit-content !important;
+    min-width: 0px;
+
+}
+
+.inventory-window {
+    border: none;
+    width: fit-content !important;
+    min-width: 0px;
+    overflow: visible;
+    border-radius: 4px;
+}
+
+
+.inventory-window .title{
+    justify-content:space-between;
+    padding: 2px 0px;
+    padding-top: 0px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.inventory-window .tray-holder{
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid var(--border-color);
+}
+
+
+.inventory-window .tray {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    padding: 2px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    min-height: var(--cell-size);
+    height: 100%;
+}
+
+
+.inventory-window .inv-root {
+    padding: 0px;
+    position: relative;
+    gap: 0px;
+    min-width: var(--cell-size);
+    width: calc(var(--cols) * var(--cell-size) + 2px);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.inventory-window .piece {
+    position: absolute;
+}
+
+.inventory-window .block {
+    width: var(--cell-size-small);
+    height: var(--cell-size-small);
+    min-width: var(--cell-size-small);
+    min-height: var(--cell-size-small);
+}
+.inventory-window .piece.dragging .block, .inventory-window .piece.placed .block, .inventory-window .cell{
+    box-sizing: border-box;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    min-width: var(--cell-size);
+    min-height: var(--cell-size);
+}
+
+.inventory-window.editing .piece .block {
+    cursor: grab;
+}
+
+.inventory-window .piece .block {
+    outline: 1px solid blue;
+    background-color: rgba(0,0,0,.35);
+}
+
+.inventory-window .piece .art {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(var(--iw) * var(--cs));
+    height: calc(var(--ih) * var(--cs));
+    object-fit: contain;
+    transform: translate(-50%, -50%) rotate(var(--rot));
+    pointer-events: none;
+}
+
+.inventory-window .piece.dragging { z-index: 10; opacity: .9; }
+
+.inventory-window .piece .block.hole {
+    visibility: hidden;       
+    pointer-events: none;
+}
+
+
+.inventory-window .piece.onTray {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.inventory-window .cell {
+    outline: 1px solid var(--border-color);
+    background-color: black;
+}
+
+.inventory-window .grid .cell.hover-ok  { background: rgba(80, 200, 120, .4); }
+.inventory-window .grid .cell.hover-bad { background: rgba(220, 80, 80, .4); }
+
+.inventory-window .cell.hole {
+    visibility: hidden;       
+    pointer-events: none;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}

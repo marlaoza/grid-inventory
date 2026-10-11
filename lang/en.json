@@ -1,0 +1,10 @@
+{
+  "GRIDINV.Inventory": "Inventory",
+  "GRIDINV.Edit": "Edit items",
+  "GRIDINV.DoneEditing": "Finish editing",
+  "GRIDINV.Tray": "Tray",
+  "GRIDINV.Spawn": "Spawn",
+  "GRIDINV.Gave": "Gave {item} to {actor}",
+  "GRIDINV.Items.briefcase.name": "Briefcase",
+  "GRIDINV.Items.briefcase.desc": "Good old briefcase."
+}

@@ -1,0 +1,23 @@
+<section class="inv-root column" style="--cols: {{width}}">
+    <div class="title row handle">
+        <span>[nome inventario]</span>
+        <div class="row" style="gap: 5px;">
+            <button type="button" style="width:30px" data-action="toggleEdit" data-tooltip="{{#if edit}}{{localize 'GRIDINV.DoneEditing'}}{{else}}{{localize 'GRIDINV.Edit'}}{{/if}}">
+                <i class="fa-solid {{#if edit}}fa-lock-open{{else}}fa-lock{{/if}}"></i>
+            </button>
+            <button class="header-control icon fa-solid fa-xmark" type="button" data-action="closeWindow">
+                {{!-- <i class="fa-solid fa-xmark"></i> --}}
+            </button>
+        </div>
+    </div>
+    <div class="grid column">
+    </div>
+        <div class="tray-holder column">
+        <div class="title row">
+            <span>{{localize "GRIDINV.Tray"}}</span>
+        </div>
+        <div class="tray">
+        </div>
+    </div>
+    <button type="button" style="width: fit-content;" data-action="spawnPiece">Spawn</button>
+</section>
